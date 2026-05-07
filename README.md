@@ -1,2 +1,30 @@
 # SabehrLX.github.io
 3D Señal.Edif
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      
+      <!-- Definimos el marcador (el "ancla" en el mundo real) -->
+      <a-marker preset="hiro">
+        
+        <!-- Aquí va la señalización: Un cubo de color con texto -->
+        <a-box position="0 0.5 0" material="color: yellow; opacity: 0.8;">
+          <a-text value="SALA DE REDES" color="black" align="center" position="0 0 0.6"></a-text>
+        </a-box>
+        
+        <!-- Una flecha simple hecha con un cono -->
+        <a-cone color="red" rotation="0 0 180" position="0 1.5 0" radius-bottom="0.2"></a-cone>
+        
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
